@@ -1,0 +1,244 @@
+/* Ajustes exclusivos de Escuela. */
+.page-escuela .escuela-modalidades .modalidad-card__img {
+  object-position: 50% 62%;
+}
+
+.page-escuela .escuela-modalidades .modalidad-card__img--online {
+  object-position: 50% 36%;
+}
+
+@media (min-width: 1024px) {
+  .page-escuela .escuela-modalidades {
+    padding-block: clamp(1rem, 2.5vh, 2rem);
+  }
+
+  .page-escuela .escuela-modalidades .section-intro {
+    margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
+  }
+
+  .page-escuela .escuela-modalidades .modalidad-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-escuela .escuela-modalidades .modalidad-card__media {
+    height: auto;
+    aspect-ratio: 2 / 1;
+    max-height: 34vh;
+    flex-shrink: 0;
+  }
+
+  .page-escuela .escuela-modalidades .modalidad-card > div:last-child {
+    padding: clamp(0.875rem, 2vh, 1.25rem);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-escuela .escuela-modalidades .modalidad-card p {
+    margin-top: 0.5rem;
+  }
+
+  .page-escuela .escuela-modalidades .modalidad-card .modalidad-card__dates {
+    margin-bottom: 0.75rem;
+  }
+
+  .page-escuela .escuela-modalidades .modalidad-card .hero-cta {
+    margin-top: auto;
+  }
+}
+
+.page-escuela .escuela-hero {
+  height: auto;
+  overflow: visible;
+}
+
+.page-escuela .escuela-hero-inner {
+  width: 100%;
+}
+
+.page-escuela .escuela-hero-logo {
+  width: 100%;
+  max-width: min(80vw, 22rem);
+}
+
+@media (min-width: 1024px) {
+  .page-escuela .escuela-hero {
+    min-height: calc(100vh - var(--nav-menu-top, 4.5rem));
+    min-height: calc(100dvh - var(--nav-menu-top, 4.5rem));
+    padding-block: clamp(1.5rem, 4vh, 3rem);
+    display: flex;
+    align-items: center;
+  }
+
+  .page-escuela .escuela-hero-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .page-escuela .escuela-hero-logo-wrap {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-escuela .escuela-hero-content {
+    position: relative;
+    left: -38px;
+  }
+
+  .page-escuela .escuela-hero-logo {
+    max-width: min(100%, 30rem);
+    max-height: calc(100dvh - var(--nav-menu-top, 4.5rem) - 6rem);
+  }
+
+  .page-escuela #escuela-hero-heading {
+    font-size: clamp(2rem, 3.3vw, 3rem);
+  }
+
+  .page-escuela .escuela-hero-actions {
+    max-width: none;
+    flex-wrap: wrap;
+  }
+}
+
+.page-escuela .nav-bar-inner {
+  min-height: 4.5rem;
+  padding-block: 0.5rem;
+  gap: 1rem;
+}
+
+.page-escuela .home-brand {
+  font-family: 'Allura', 'Gilda Display', Georgia, cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 2.625rem);
+  line-height: 1.2;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.page-escuela .nav-right {
+  gap: 1.25rem;
+}
+
+.page-escuela .nav-bar .nav-link {
+  color: var(--color-white) !important;
+  font-size: 1rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+  padding-block: 0.75rem;
+}
+
+.page-escuela .nav-bar .nav-link::after {
+  background: var(--color-white);
+  bottom: 0.25rem;
+}
+
+.page-escuela .nav-bar .home-nav-school,
+.page-escuela .nav-menu-mobile-links .home-nav-school {
+  background: var(--color-primary-light);
+  color: var(--color-primary-active) !important;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.page-escuela .nav-bar .home-nav-school::after {
+  content: none;
+}
+
+.page-escuela .nav-menu-link,
+.page-escuela .nav-menu-cta {
+  color: var(--color-white);
+}
+
+.page-escuela .nav-menu-link:hover,
+.page-escuela .nav-menu-cta:hover {
+  color: var(--color-primary-active);
+  background: var(--color-primary-light);
+}
+
+.page-escuela .nav-menu-cta {
+  background: transparent;
+  margin-top: 0;
+}
+
+.page-escuela .nav-bar a:focus-visible,
+.page-escuela .nav-menu-mobile-panel a:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+
+/* Footer matching Inicio. */
+.page-escuela .footer #footer-brand-heading,
+.page-escuela .footer .footer__heading {
+  display: block;
+  margin: 0 0 1rem;
+  color: var(--color-violet-light);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-escuela .footer__bottom {
+  width: 100%;
+  gap: 1.5rem 3rem;
+}
+
+.page-escuela .footer__bottom > p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .page-escuela .footer__bottom {
+    justify-content: space-between;
+  }
+
+  .page-escuela .footer__bottom > p:last-child {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+.page-escuela .footer .footer__section--social {
+  align-items: center;
+  text-align: center;
+}
+
+.page-escuela .footer .footer__social-list {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .page-escuela .footer {
+    padding-block: 6.5rem;
+  }
+
+  .page-escuela .footer__grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr) minmax(0, 4fr) minmax(max-content, 6fr);
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-bottom: 3.5rem;
+    align-items: start;
+  }
+
+  .page-escuela .footer__contact-row a {
+    white-space: nowrap;
+  }
+
+  .page-escuela .footer__section {
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .page-escuela .footer__section--brand {
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+

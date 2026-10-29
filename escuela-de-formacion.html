@@ -50,54 +50,56 @@
       },
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&family=Gilda+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&family=Gilda+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/colors.css?v=2">
   <link rel="stylesheet" href="assets/css/main.css?v=2">
   <link rel="stylesheet" href="assets/css/tailwind-extras.css?v=2">
+  <link rel="stylesheet" href="assets/css/escuela.css?v=1">
   <link rel="preload" as="image" href="assets/images/escuela-800w.webp" imagesrcset="assets/images/escuela-480w.webp 480w,
                        assets/images/escuela-800w.webp 800w" imagesizes="(max-width: 768px) 100vw, 80vw">
 </head>
 <body class="page-escuela antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
 
-  <nav id="nav-bar" class="nav-bar z-50 sticky top-0 lg:static bg-neutral-light border-b border-neutral-200/80 transition-shadow duration-300 shadow-sm" role="navigation" aria-label="Navegación principal">
-    <div class="nav-bar-inner max-w-container mx-auto px-3 sm:px-4 lg:px-6 py-3 md:py-4">
-      <a href="/" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
-        <img src="assets/images/logo.svg" alt="" class="nav-logo-img h-20 sm:h-20 md:h-28 w-auto object-contain" width="320" height="32" aria-hidden="true">
-        <div class="hidden sm:flex flex-col">
-          <span class="hidden font-nav text-lg md:text-2xl font-semibold text-primary tracking-tight leading-tight">Andrea Blangino</span>
-          <!-- <span class="text-[10px] uppercase tracking-[0.15em] text-neutral-mid mx-auto">Terapeuta Holística</span> -->
+    <nav id="nav-bar" class="nav-bar z-50 sticky top-0 lg:static bg-neutral-light border-b border-neutral-200/80 transition-shadow duration-300 shadow-sm" role="navigation" aria-label="Navegación principal">
+        <div class="nav-bar-inner max-w-container mx-auto px-6 md:px-5 lg:px-20 py-3 md:py-4">
+            <!-- Identidad textual: conservar logo.svg como recurso histórico -->
+            <a href="/" aria-label="Andrea Blangino — Inicio" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
+                <span class="home-brand">Andrea Blangino</span>
+            </a>
+
+            <!-- Enlaces de escritorio ≥1280px -->
+            <div class="nav-right hidden xl:flex items-center gap-6 xl:gap-8">
+                <a href="index.html#inicio" class="nav-link-tailwind nav-link font-nav">Inicio</a>
+                <a href="escuela-de-formacion.html" aria-current="page" class="nav-link-tailwind nav-link home-nav-school font-nav">Escuela de Formación</a>
+                <a href="terapias.html" class="nav-link-tailwind nav-link font-nav">Terapias Individuales</a>
+                <a href="sobre-mi.html" class="nav-link-tailwind nav-link font-nav">Sobre Mí</a>
+                <a href="/#contacto" class="nav-link-tailwind nav-link font-nav">Contacto</a>
+            </div>
+
+            <!-- Hamburger / X en pantallas <1280px -->
+            <button type="button" id="nav-trigger" class="nav-trigger xl:hidden flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 rounded-lg text-primary hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-active shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
+                <span class="nav-trigger-icons" aria-hidden="true">
+                    <i class="nav-icon-menu fas fa-bars" aria-hidden="true"></i>
+                    <i class="nav-icon-close fas fa-times" aria-hidden="true"></i>
+                </span>
+            </button>
         </div>
-      </a>
-      <nav class="nav-links hidden xl:flex items-center gap-6 xl:gap-8" aria-label="Enlaces principales">
-        <a href="index.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">INICIO</a>
-        <a href="terapias.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">TERAPIAS</a>
-        <a href="talleres.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">TALLERES</a>
-        <a href="escuela-de-formacion.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">FORMACIÓN</a>
-        <a href="sobre-mi.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">SOBRE MÍ</a>
-      </nav>
-      <a href="/#contacto" class="nav-cta hidden xl:inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-semibold rounded hover:bg-primary-hover transition-colors shadow-sm no-underline whitespace-nowrap uppercase shrink-0">CONTACTO</a>
-      <button type="button" id="nav-trigger" class="nav-trigger xl:hidden flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 rounded-lg text-primary hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-active shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
-        <span class="nav-trigger-icons" aria-hidden="true">
-          <i class="nav-icon-menu fas fa-bars" aria-hidden="true"></i>
-          <i class="nav-icon-close fas fa-times" aria-hidden="true"></i>
-        </span>
-      </button>
-    </div>
-    <div id="nav-menu-mobile" class="nav-menu-mobile fixed inset-0 z-40 flex flex-col xl:hidden nav-menu-mobile-panel" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true">
-      <div class="nav-menu-backdrop" aria-hidden="true"></div>
-      <div class="nav-menu-mobile-content">
-        <nav class="nav-menu-mobile-links" role="menubar" aria-label="Enlaces del menú">
-          <a href="index.html" role="menuitem" class="nav-menu-link font-nav">Inicio</a>
-          <a href="terapias.html" role="menuitem" class="nav-menu-link font-nav">Terapias</a>
-          <a href="talleres.html" role="menuitem" class="nav-menu-link font-nav">Talleres</a>
-          <a href="escuela-de-formacion.html" role="menuitem" class="nav-menu-link font-nav">Formación</a>
-          <a href="sobre-mi.html" role="menuitem" class="nav-menu-link font-nav">Sobre Mí</a>
-        </nav>
-        <a href="/#contacto" class="nav-menu-cta font-nav text-[16px] leading-[22px] font-semibold uppercase">Contacto</a>
-      </div>
-    </div>
-  </nav>
+
+        <!-- Menú móvil/tablet: overlay; visible solo <1280px -->
+        <div id="nav-menu-mobile" class="nav-menu-mobile fixed inset-0 z-40 flex flex-col xl:hidden nav-menu-mobile-panel" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true">
+            <div class="nav-menu-backdrop" aria-hidden="true"></div>
+            <div class="nav-menu-mobile-content">
+                <nav class="nav-menu-mobile-links" role="menubar" aria-label="Enlaces del menú">
+                    <a href="index.html" role="menuitem" class="nav-menu-link font-nav">Inicio</a>
+                    <a href="escuela-de-formacion.html" aria-current="page" role="menuitem" class="nav-menu-link home-nav-school font-nav">Escuela de Formación</a>
+                    <a href="terapias.html" role="menuitem" class="nav-menu-link font-nav">Terapias Individuales</a>
+                    <a href="sobre-mi.html" role="menuitem" class="nav-menu-link font-nav">Sobre Mí</a>
+                </nav>
+                <a href="/#contacto" class="nav-menu-cta font-nav text-[16px] leading-[22px] font-semibold">Contacto</a>
+            </div>
+        </div>
+    </nav>
 
   <section class="escuela-hero relative overflow-hidden bg-gradient-to-b from-neutral-light via-white to-primary-pale/50 py-10 sm:py-12 md:py-14 lg:py-16" aria-labelledby="escuela-hero-heading">
     <div class="escuela-hero-inner max-w-container mx-auto px-5 lg:px-12">
@@ -119,7 +121,7 @@
               Modalidad Presencial
             </a>
             <a href="formacion-online.html" class="hero-cta hero-cta--secondary inline-flex items-center justify-center w-full min-h-12 px-8 py-3.5 border-2 border-primary text-primary font-nav text-sm font-semibold rounded hover:bg-primary-pale transition-colors no-underline uppercase tracking-wide lg:w-auto lg:min-h-0">
-              Modalidad Online Intensiva
+              Modalidad Online
             </a>
           </div>
         </div>
@@ -127,7 +129,7 @@
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-white" aria-labelledby="modalidades-heading">
+  <section class="escuela-modalidades py-16 md:py-24 bg-white" aria-labelledby="modalidades-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20">
       <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
         <h2 id="modalidades-heading" class="font-serif text-3xl font-semibold leading-tight text-neutral-dark md:text-4xl">
@@ -146,8 +148,9 @@
           <div class="p-6 md:p-8">
             <h3 class="font-serif text-2xl font-semibold text-neutral-dark">Modalidad Presencial</h3>
             <p class="mt-4 font-nav text-sm leading-relaxed text-neutral-mid md:text-base">
-              Un recorrido vivencial para aprender en grupo, practicar con acompañamiento cercano y compartir el proceso en un espacio de encuentro.
+              Una experiencia de aprendizaje compartido, con clases prácticas, ejercicios grupales y acompañamiento cercano.
             </p>
+            <p class="modalidad-card__dates mt-3 font-nav text-sm font-semibold text-primary">Villa Carlos Paz · Marzo a noviembre de 2027</p>
             <a href="formacion-presencial.html" class="hero-cta hero-cta--primary mt-6 inline-flex w-full items-center justify-center min-h-12 px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded hover:bg-primary-hover transition-colors shadow-md no-underline uppercase tracking-wide sm:w-auto md:min-h-0">
               Ver modalidad presencial
             </a>
@@ -156,13 +159,14 @@
 
         <article class="modalidad-card overflow-hidden rounded-2xl border border-neutral-100 bg-neutral-light shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
           <div class="modalidad-card__media aspect-[4/3] overflow-hidden">
-            <img src="assets/images/online-800w.webp" alt="Modalidad online intensiva de la Escuela de Formación Práctica en Biodecodificación" class="modalidad-card__img modalidad-card__img--online h-full w-full object-cover transition-transform duration-500 hover:scale-105" width="800" height="600" loading="lazy">
+            <img src="assets/images/online-800w.webp" alt="Modalidad online de la Escuela de Formación Práctica en Biodecodificación" class="modalidad-card__img modalidad-card__img--online h-full w-full object-cover transition-transform duration-500 hover:scale-105" width="800" height="600" loading="lazy">
           </div>
           <div class="p-6 md:p-8">
-            <h3 class="font-serif text-2xl font-semibold text-neutral-dark">Modalidad Online Intensiva</h3>
+            <h3 class="font-serif text-2xl font-semibold text-neutral-dark">Modalidad Online</h3>
             <p class="mt-4 font-nav text-sm leading-relaxed text-neutral-mid md:text-base">
-              Una propuesta intensiva para formarte desde donde estés, con clases y recursos pensados para integrar teoría, práctica y acompañamiento.
+              Formate desde donde estés, con clases en vivo, participación activa y acompañamiento durante todo el recorrido.
             </p>
+            <p class="modalidad-card__dates mt-3 font-nav text-sm font-semibold text-primary">Abril a octubre de 2027</p>
             <a href="formacion-online.html" class="hero-cta hero-cta--secondary mt-6 inline-flex w-full items-center justify-center min-h-12 px-8 py-3.5 border-2 border-primary text-primary font-nav text-sm font-semibold rounded hover:bg-primary-pale transition-colors no-underline uppercase tracking-wide sm:w-auto md:min-h-0">
               Ver modalidad online
             </a>
@@ -668,60 +672,55 @@
   </section>
 
   <footer id="contacto" class="footer py-24 md:py-28 bg-separator text-white" aria-label="Contacto y pie de página">
-    <div class="max-w-container mx-auto px-5 lg:px-20">
-      <div class="footer__grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-16 items-start text-center lg:text-left">
-        <section class="footer__section footer__section--brand" aria-labelledby="footer-brand-heading">
-          <h2 id="footer-brand-heading" class="font-serif text-2xl font-semibold text-accent block mb-4">Andrea Blangino</h2>
-          <p class="text-white/70 text-sm leading-relaxed">Sesiones Individuales. Directora de la Escuela de Formación Práctica en Biodecodificación - Registros Akáshicos</p>
-        </section>
-        <section class="footer__section" aria-labelledby="footer-nav-heading">
-          <h3 id="footer-nav-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Navegación</h3>
-          <ul class="footer__nav-list space-y-3 text-sm text-white/70" role="list">
-            <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
-            <li><a href="terapias.html" class="hover:text-white transition-colors">Terapias</a></li>
-            <li><a href="talleres.html" class="hover:text-white transition-colors">Talleres</a></li>
-            <li><a href="escuela-de-formacion.html" class="hover:text-white transition-colors">Formación</a></li>
-            <li><a href="sobre-mi.html" class="hover:text-white transition-colors">Sobre Mí</a></li>
-          </ul>
-        </section>
-        <section class="footer__section footer__section--social" aria-labelledby="footer-social-heading">
-          <h3 id="footer-social-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Redes Sociales</h3>
-          <ul class="footer__social-list text-lg" role="list">
-            <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-            <li><a href="https://facebook.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-          </ul>
-        </section>
-        <section class="footer__section" aria-labelledby="footer-contact-heading">
-          <h3 id="footer-contact-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Contacto</h3>
-          <ul class="footer__contact-list space-y-3 text-sm text-white/70" role="list">
-            <li class="footer__contact-row flex items-center justify-center lg:justify-start gap-3">
-              <i class="far fa-envelope text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
-              <span>contacto@andreablangino.com</span>
-              <!-- PLACEHOLDER: email — Cloudflare will obfuscate on deploy -->
-            </li>
-            <li class="footer__contact-row flex items-center justify-center lg:justify-start gap-3">
-              <i class="fab fa-whatsapp text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
-              <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20comunico%20desde%20la%20pagina%20web%20para%20consultarte%20acerca%20de%20los%20turnos%20para%20Biodecodificacion" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">+5493541574635</a>
-              <!-- PLACEHOLDER: replace WhatsApp number -->
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-xs text-white/50 text-center md:text-left">
-        <p class="text-xs text-white/50 mt-2 inline-flex items-center gap-2">
-          Desarrollado por 
-          <a href="https://github.com/jrodriguezblangino" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 hover:text-white/70 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-            JRB
-          </a>
-        </p>
-        <p><a href="politica-privacidad.html" class="hover:text-white/70 transition-colors">Política de privacidad</a></p>
-      </div>
-    </div>
-  </footer>
+        <div class="max-w-container mx-auto px-5 lg:px-20">
+            <div class="footer__grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-16 items-start text-center lg:text-left">
+                <section class="footer__section footer__section--brand" aria-labelledby="footer-brand-heading">
+                    <h2 id="footer-brand-heading" class="font-serif text-2xl font-semibold text-accent block mb-4">Andrea Blangino</h2>
+                    <p class="text-white/70 text-sm leading-relaxed">Directora de la Escuela de Formación Práctica en Biodecodificación.<br>Sesiones individuales de Biodecodificación.<br>Apertura de Registros Akáshicos.</p>
+                </section>
+                <section class="footer__section" aria-labelledby="footer-nav-heading">
+                    <h3 id="footer-nav-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Navegación</h3>
+                    <ul class="footer__nav-list space-y-3 text-sm text-white/70" role="list">
+                        <li><a href="/#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="terapias.html" class="hover:text-white transition-colors">Terapias individuales</a></li>
+                        <li><a href="escuela-de-formacion.html" class="hover:text-white transition-colors">Escuela de Formación</a></li>
+                        <li><a href="sobre-mi.html" class="hover:text-white transition-colors">Sobre Mí</a></li>
+                    </ul>
+                </section>
+                <section class="footer__section footer__section--social" aria-labelledby="footer-social-heading">
+                    <h3 id="footer-social-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Redes Sociales</h3>
+                    <ul class="footer__social-list text-lg" role="list">
+                        <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="https://facebook.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    </ul>
+                </section>
+                <section class="footer__section" aria-labelledby="footer-contact-heading">
+                    <h3 id="footer-contact-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Contacto</h3>
+                    <ul class="footer__contact-list space-y-3 text-sm text-white/70" role="list">
+                        <li class="footer__contact-row flex items-center justify-center lg:justify-start gap-3">
+                            <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20comunico%20desde%20la%20pagina%20web%20para%20consultarte%20acerca%20de%20los%20turnos%20para%20Biodecodificacion" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 py-2 text-white hover:text-white transition-colors" aria-label="Escribime por WhatsApp al +54 9 3541 574635">
+                                <i class="fab fa-whatsapp text-2xl flex-shrink-0" aria-hidden="true"></i>
+                                <span><span class="block font-semibold">Escribime por WhatsApp</span><span class="block text-white/70">+54 9 3541 574635</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer__bottom pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-xs text-white/50 text-center md:text-left">
+                <p class="text-xs text-white/50 mt-2 inline-flex items-center gap-2">
+                  Desarrollado por
+                  <a href="https://github.com/jrodriguezblangino" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 hover:text-white/70 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    JRB
+                  </a>
+                </p>
+                <p><a href="/politica-privacidad.html" class="hover:text-white/70 transition-colors">Política de privacidad</a></p>
+            </div>
+        </div>
+    </footer>
 
   <script src="assets/js/main.js"></script>
 

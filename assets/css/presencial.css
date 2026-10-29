@@ -1,0 +1,197 @@
+/* Navbar de Escuela y presentación exclusiva de Presencial. */
+.page-presencial .modalidad-page-hero {
+  padding-block: 2rem;
+}
+
+.page-presencial .modalidad-page-hero .modalidad-hero__title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.page-presencial .modalidad-page-hero .modalidad-hero__actions {
+  flex-wrap: wrap;
+}
+
+.page-presencial .modalidad-page-hero .formacion-image {
+  object-position: 50% 58%;
+}
+
+@media (min-width: 1024px) {
+  .page-presencial .modalidad-page-hero {
+    min-height: calc(100vh - var(--nav-menu-top, 4.5rem));
+    min-height: calc(100dvh - var(--nav-menu-top, 4.5rem));
+    padding-block: clamp(1rem, 3vh, 2rem);
+    display: flex;
+    align-items: center;
+  }
+
+  .page-presencial .modalidad-page-hero > div {
+    width: 100%;
+    padding-inline: 3rem;
+  }
+
+  .page-presencial .modalidad-breadcrumb {
+    margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
+  }
+
+  .page-presencial .presencial-hero-grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .page-presencial .modalidad-hero__media .formacion-image-wrap {
+    aspect-ratio: 4 / 3;
+    max-height: calc(100dvh - var(--nav-menu-top, 4.5rem) - 7rem);
+  }
+
+  .page-presencial .modalidad-hero__lead {
+    margin-top: 1.25rem;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+  }
+
+  .page-presencial .modalidad-hero__actions {
+    margin-top: 1.5rem;
+  }
+}
+
+.page-presencial .nav-bar-inner {
+  min-height: 4.5rem;
+  padding-block: 0.5rem;
+  gap: 1rem;
+}
+
+.page-presencial .home-brand {
+  font-family: 'Allura', 'Gilda Display', Georgia, cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 2.625rem);
+  line-height: 1.2;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.page-presencial .nav-right {
+  gap: 1.25rem;
+}
+
+.page-presencial .nav-bar .nav-link {
+  color: var(--color-white) !important;
+  font-size: 1rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+  padding-block: 0.75rem;
+}
+
+.page-presencial .nav-bar .nav-link::after {
+  background: var(--color-white);
+  bottom: 0.25rem;
+}
+
+.page-presencial .nav-bar .home-nav-school,
+.page-presencial .nav-menu-mobile-links .home-nav-school {
+  background: var(--color-primary-light);
+  color: var(--color-primary-active) !important;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.page-presencial .nav-bar .home-nav-school::after {
+  content: none;
+}
+
+.page-presencial .nav-menu-link,
+.page-presencial .nav-menu-cta {
+  color: var(--color-white);
+}
+
+.page-presencial .nav-menu-link:hover,
+.page-presencial .nav-menu-cta:hover {
+  color: var(--color-primary-active);
+  background: var(--color-primary-light);
+}
+
+.page-presencial .nav-menu-cta {
+  background: transparent;
+  margin-top: 0;
+}
+
+.page-presencial .nav-bar a:focus-visible,
+.page-presencial .nav-menu-mobile-panel a:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+
+
+/* Footer matching Inicio. */
+.page-presencial .footer #footer-brand-heading,
+.page-presencial .footer .footer__heading {
+  display: block;
+  margin: 0 0 1rem;
+  color: var(--color-violet-light);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-presencial .footer__bottom {
+  width: 100%;
+  gap: 1.5rem 3rem;
+}
+
+.page-presencial .footer__bottom > p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .page-presencial .footer__bottom {
+    justify-content: space-between;
+  }
+
+  .page-presencial .footer__bottom > p:last-child {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+.page-presencial .footer .footer__section--social {
+  align-items: center;
+  text-align: center;
+}
+
+.page-presencial .footer .footer__social-list {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .page-presencial .footer {
+    padding-block: 6.5rem;
+  }
+
+  .page-presencial .footer__grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr) minmax(0, 4fr) minmax(max-content, 6fr);
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-bottom: 3.5rem;
+    align-items: start;
+  }
+
+  .page-presencial .footer__contact-row a {
+    white-space: nowrap;
+  }
+
+  .page-presencial .footer__section {
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .page-presencial .footer__section--brand {
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+
